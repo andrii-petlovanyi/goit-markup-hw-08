@@ -89,6 +89,7 @@
     gap: 60px;
 
     @media screen and (min-width: $desktop) {
+        align-items: baseline;
         justify-content: space-between;
         gap: 0;
     }

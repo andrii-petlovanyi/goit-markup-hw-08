@@ -1,0 +1,47 @@
+@import '../utils/variables';
+
+.work {
+    display: none;
+
+    @media screen and (min-width: $desktop) {
+        display: contents;
+    }
+}
+
+
+.work__title {
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: getColor(primaryTextColor)
+}
+
+.work__list {
+    display: flex;
+    gap: 30px;
+
+}
+
+.work__item {
+    position: relative;
+}
+
+.work__label {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+    color: getColor(secondTextColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}

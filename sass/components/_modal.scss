@@ -1,0 +1,235 @@
+@import '../utils/variables';
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 250ms $timingBuzier,
+        visibility 250ms $timingBuzier;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.7);
+}
+
+.modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    padding: 40px;
+    width: 90%;
+    background-color: getColor(secondTextColor);
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    opacity: 1;
+    transition: transform 250ms $timingBuzier;
+
+    @media screen and (min-width: $mobile) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 528px;
+    }
+}
+
+
+.modal__btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: getColor(secondTextColor);
+    fill: currentColor;
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: color 250ms $timingBuzier;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        color: getColor(acentTextColor);
+    }
+}
+
+.modal .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.modal .form__title {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: getColor(primaryTextColor);
+
+    @media screen and (min-width: $desktop) {
+            line-height: 1.15;
+    }
+}
+
+.modal .form__label {
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.modal .form__input {
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+    margin-top: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border 250ms $timingBuzier;
+
+    &:focus {
+        border: 1px solid getColor(acentTextColor);
+        border-radius: 4px;
+        outline: none;
+    }
+
+    &:focus + .form__icon {
+        color: getColor(acentTextColor);
+    }
+}
+
+.modal .form__info {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: getCoor(otherTextColor);
+}
+
+.modal .form__icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    fill: currentColor;
+    transition: color 250ms $timingBuzier;
+}
+
+.modal .form__label-coment {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.modal .form__comment {
+    width: 100%;
+    padding: 12px 16px;
+    height: 120px;
+    margin-top: 4px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    transition: border 250ms $timingBuzier;
+
+    &::placeholder {
+        font-size: 12px;
+        line-height: 1.16;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+
+    &:focus {
+        border: 1px solid getColor(acentTextColor);
+        border-radius: 4px;
+        outline: none;
+    }
+}
+
+.modal .form__send {
+    @extend %btn;
+    margin-top: 30px;
+}
+
+
+.form .check {
+    position: relative;
+}
+
+.form .check__policy-info {
+    display: inline;
+    font-weight: 400;
+    font-size: 12px;
+    margin-right: 5px;
+    line-height: 1.71;
+    color: getColor(otherTextColor);
+
+    @media screen and (min-width: $desktop) {
+        font-size: 14px;        
+    }
+}
+
+.form  .check__link-policy {
+    color: getColor(acentTextColor);
+    text-decoration: underline;
+}
+
+.form .check__icon {
+    position: relative;
+    top: 4px;
+    margin-right: 4px;
+    transition: opacity 250ms $timingBuzier;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+    }
+}
+
+.form .check__icon-checked {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin-right: 4px;
+    left: 0;
+    top: 4px;
+    opacity: 0;
+    transition: opacity 250ms $timingBuzier;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+    }
+}
+
+.form .check__input {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:checked~.check__icon-checked {
+        opacity: 1;
+    }
+
+}

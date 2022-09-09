@@ -1,0 +1,25 @@
+// --- Colors ---
+
+$colors: (
+    'primaryTextColor': #212121,
+    'secondTextColor': #fff,
+    'otherTextColor': #757575,
+    'acentTextColor': #2196f3,
+    'accentBlockColor': #f5f4fa,
+    'secondBlockColor': #2f303a,
+    'iconColor': #afb1b8,
+    'borderColorCustomer': #afb1b8,
+);
+
+@function getColor($key) {
+    @return map-get($colors, $key);
+}
+
+// --- Formula animation ---
+
+$timingBuzier: cubic-bezier(0.4, 0, 0.2, 1);
+
+// --- Breakpoints ---
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;

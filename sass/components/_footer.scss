@@ -1,0 +1,146 @@
+@import '../utils/variables';
+
+.footer {
+    background-color: getColor(secondBlockColor);
+}
+
+.footer .logo {
+    display: block;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
+}
+
+.footer__title {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
+}
+
+.footer__socials,
+.footer__subscribe {
+    color: getColor(secondTextColor);
+}
+
+.footer .address {
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
+}
+
+.footer .address__item:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.footer .address__link {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: $timingBuzier;
+
+    &:hover,
+    &:focus {
+        color: getColor(acentTextColor);
+    }
+}
+
+.footer .address__link--white {
+    color: getColor(secondTextColor);
+}
+
+.footer .socials {
+    display: flex;
+    gap: 10px;
+}
+
+.footer .socials__link {
+    display: flex;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: $timingBuzier;
+
+    &:hover,
+    &:focus {
+        background-color: getColor(acentTextColor);
+    }
+}
+
+.footer .socials__icon {
+    fill: getColor(accentBlockColor);
+}
+
+.footer__subscribe {
+    @media screen and (max-width: 1199px) {
+        width: 100%;
+    }
+}
+
+.footer .subscribe {
+    display: flex;
+
+    @media screen and (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.footer .subscribe__label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .subscribe__email {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    transition: border 250ms $timingBuzier;
+
+    &:focus {
+        border: 1px solid getColor(acentTextColor);
+        outline: none;
+    }
+
+    @media screen and (min-width: $mobile) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 358px;
+        margin-right: 12px;
+    }
+}
+
+.footer .subscribe__btn {
+    @extend %btn;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 32px;
+}
+
+.footer .subscribe__icon {
+    fill: currentColor;
+    margin-left: 10px;
+}

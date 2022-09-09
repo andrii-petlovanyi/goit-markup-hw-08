@@ -1,0 +1,75 @@
+@import '../utils/variables';
+
+/* Site navigation / Header*/
+.header {
+    border-bottom: 1px solid #ececec;
+}
+
+.menu__burger {
+    width: 40px;
+    height: 40px;
+    display: block;
+    border: none;
+    background: none;
+    margin-left: auto;
+}
+
+
+.navigation__link {
+    position: relative;
+    color: vgetColor(primaryTextColor);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: color 250ms $timingBuzier;
+
+    &:hover,
+    &:focus {
+        color: getColor(acentTextColor);
+    }
+}
+
+.navigation__link--active {
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        bottom: 0;
+        right: 0;
+        background-color: getColor(acentTextColor);
+        border-radius: 2px;
+    }
+}
+
+.contacts {
+
+}
+
+.contacts__item {
+
+}
+
+.contacts__link {
+    color: getColor(otherTextColor);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 250ms $timingBuzier;
+
+    &:hover,
+    &:focus {
+        color: getColor(acentTextColor);
+    }
+}
+
+.contacts__email-icon,
+.contacts__smartphone-icon {
+    fill: currentColor;
+
+}

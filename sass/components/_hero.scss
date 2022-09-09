@@ -1,0 +1,47 @@
+@import '../utils/variables';
+
+.hero {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: getColor(secondTextColor);
+    background-color: getColor(secondBlockColor);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../../images/desktop/hero@1x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: url('../../images/desktop/hero@2x.jpg');
+        }
+}
+
+
+.hero__button {
+    @extend %btn;
+}
+
+.hero__title {
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $tablet){
+        width: 360px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 696px;
+        line-height: 1.36;
+        font-size: 44px;
+    }
+}

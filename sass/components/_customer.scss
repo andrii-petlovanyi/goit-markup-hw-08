@@ -1,0 +1,57 @@
+@import '../utils/variables';
+
+.customer__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    color: getColor(iconColor);
+}
+
+.customer__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 36px;
+    }
+}
+
+.customer__link {
+    display: flex;
+    justify-content: center;
+    padding: 16px 52px;
+    width: 210px;
+    border: 1px solid getColor(borderColorCustomer);
+    border-radius: 4px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: $timingBuzier;
+
+    &:hover,
+    &:focus {
+        border: 1px solid getColor(acentTextColor);
+        color: getColor(acentTextColor);
+        cursor: pointer;
+    }
+
+    @media screen and (min-width: $tablet) {
+        padding: 16px 60px;
+        width: 226px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        padding: 16px 32px;
+        width: 170px;
+    }
+}
+
+.customer__icon {
+    fill: currentColor;
+}

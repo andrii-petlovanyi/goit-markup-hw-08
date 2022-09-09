@@ -1,0 +1,104 @@
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @media screen and (min-width: $mobile) {
+        width: $mobile;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: $tablet;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        width: $desktop;
+    }
+}
+
+.container--head_resize {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+
+    @media screen and (min-width: $tablet) {
+        height: 80px;
+    }
+}
+
+.container--hero_resize {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 118px 0;
+
+    @media screen and (min-width: $desktop) {
+        padding: 200px 0;
+    }
+}
+
+.container-features_resize {
+    padding: 60px 15px;
+
+    @media screen and (min-width: $desktop) {
+        padding: 94px 15px;
+    }
+}
+
+.container--work_resize {
+    padding: 94px 15px;
+}
+
+.container--team_resize {
+    padding: 60px 15px;
+
+    @media screen and (min-width: $desktop) {
+        padding: 94px 15px;
+    }
+
+}
+
+.container--customer_resize {
+    padding: 60px 15px;
+
+    @media screen and (min-width: $desktop) {
+            padding: 94px 15px;
+        }
+}
+
+
+.container--footer_resize {
+    padding: 60px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+
+    @media screen and (min-width: $desktop) {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+}
+
+.container--portfolio_resize {
+    padding: 60px 15px;
+
+    @media screen and (min-width: $desktop) {
+        padding: 94px 15px;
+    }
+}

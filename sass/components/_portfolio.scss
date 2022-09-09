@@ -1,0 +1,152 @@
+@import '../utils/variables';
+
+.portfolio {
+    background-color: getColor(secondTextColor);
+}
+
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+
+    @media screen and (min-width: $tablet) {
+        justify-content: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 35px;
+    }
+}
+
+.filter__button {
+    padding: 6px 22px;
+    margin-bottom: 15px;
+    background: getColor(accentBlockColor);
+    border-radius: 4px;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    transition: color 250ms $timingBuzier,
+        background-color 250ms $timingBuzier,
+        box-shadow 250ms $timingBuzier;
+
+    &:hover,
+    &:focus {
+        background-color: getColor(acentTextColor);
+        color: getColor(secondTextColor);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+    }
+}
+
+.filter__item {
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
+}
+
+.portfolio .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        gap: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+    }
+}
+
+.portfolio .list__card {
+    display: inline-block;
+    transition: box-shadow 250ms $timingBuzier;
+
+    &:hover .list__thumb::before,
+    &:hover .list__label,
+    &:focus .list__thumb::before,
+    &:focus .list__label {
+        transform: translateY(0);
+    }
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: 354px;
+    }
+}
+
+.portfolio .list__thumb {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(33, 150, 243, 0.9);
+        transform: translateY(100%);
+        transition: transform 250ms $timingBuzier;
+    }
+}
+
+.portfolio .list__label {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 24px;
+    width: 100%;
+    height: 294px;
+    top: 0;
+    left: 0;
+    color: getColor(secondTextColor);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    transform: translateY(100%);
+    transition: transform 250ms $timingBuzier;
+}
+
+.portfolio .list__wrap {
+    padding: 20px 0 20px 24px;
+    border: 1px solid #eeeeee;
+    border-top: none;
+}
+
+.portfolio .list__title {
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: getColor(primaryTextColor);
+}
+
+.portfolio .list__category {
+    font-size: 16px;
+    line-height: 1.88;
+    color: getColor(otherTextColor);
+}

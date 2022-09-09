@@ -1,0 +1,90 @@
+@import '../utils/variables';
+
+.team {
+    background-color: getColor(accentBlockColor);
+}
+
+.team__title {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 1.17;
+    text-align: center;
+    color: getColor(primaryTextColor);
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+            font-size: 36px;
+    }
+}
+
+.team__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+
+.team__item {
+    background: getColor(secondTextColor);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+        width: 354px;
+    }
+
+    @media screen and (min-width: $desktop) {
+       width: 270px; 
+    }
+}
+
+.team .card {
+    padding: 30px 0;
+}
+
+.team .card__title {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    color: getColor(primaryTextColor);
+
+}
+
+.team .card__label {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.19;
+    color: getColor(otherTextColor);
+}
+
+.team .card__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: getColor(iconColor);
+}
+
+.team .card__link {
+    display: flex;
+    padding: 12px;
+    border-radius: 50%;
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: $timingBuzier;
+
+    &:hover,
+    &:focus {
+        background-color: getColor(acentTextColor);
+        color: getColor(secondTextColor);
+    }
+}
+
+.team .card__icon {
+    fill: currentColor;
+}
+

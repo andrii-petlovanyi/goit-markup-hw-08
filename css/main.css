@@ -409,14 +409,14 @@ body {
   margin-right: auto;
   color: #fff;
   background-color: #2f303a;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/desktop/hero@1x.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/hero@1x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../../images/desktop/hero@2x.jpg);
+    background-image: url(../images/desktop/hero@2x.jpg);
   }
 }
 .hero__title {

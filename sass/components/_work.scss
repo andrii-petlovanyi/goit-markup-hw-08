@@ -10,12 +10,9 @@
 
 .work__title {
     margin-bottom: 50px;
+    color: getColor(primaryTextColor);
+    @include fSize(700, 36px, 1.17, 0.03em);
     text-align: center;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    color: getColor(primaryTextColor)
 }
 
 .work__list {
@@ -34,13 +31,9 @@
     right: 0;
     width: 100%;
     height: 70px;
+    @include flexJustAlign(flex, center, center);
     background: rgba(47, 48, 58, 0.8);
     color: getColor(secondTextColor);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0.03em;
+    @include fSize(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
 }

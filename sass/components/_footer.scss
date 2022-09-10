@@ -15,9 +15,7 @@
 
 .footer__title {
     margin-bottom: 20px;
-    font-size: 14px;
-    line-height: 1.4;
-    letter-spacing: 0.03em;
+    @include fSize(700, 14px, 1.4, 0.03em);
     text-transform: uppercase;
 
     @media screen and (max-width: 1199px) {
@@ -41,14 +39,10 @@
 }
 
 .footer .address__link {
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
     color: rgba(255, 255, 255, 0.6);
+    @include fSize(400, 14px, 1.71, 0.03em);
     text-decoration: none;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: $timingBuzier;
+    transition: color 250ms $timingBuzier;
 
     &:hover,
     &:focus {
@@ -94,17 +88,13 @@
     display: flex;
 
     @media screen and (max-width: 1199px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flexAlignDir(flex, center, column);
     }
 }
 
 .footer .subscribe__label {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexJustAlign(flex, center, center);
 }
 
 .footer .subscribe__email {
@@ -134,9 +124,7 @@
 
 .footer .subscribe__btn {
     @extend %btn;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexJustAlign(flex, space-between, center);
     padding: 10px 32px;
 }
 

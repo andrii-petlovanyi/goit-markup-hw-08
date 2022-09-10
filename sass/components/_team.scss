@@ -6,15 +6,13 @@
 
 .team__title {
     margin-bottom: 30px;
-    font-weight: 700;
-    font-size: 33px;
-    line-height: 1.17;
-    text-align: center;
     color: getColor(primaryTextColor);
+    @include fSize(700, 28px, 1.16, 0.03em);
+    text-align: center;
 
     @media screen and (min-width: $desktop) {
         margin-bottom: 50px;
-            font-size: 36px;
+        font-size: 36px;
     }
 }
 
@@ -37,7 +35,7 @@
     }
 
     @media screen and (min-width: $desktop) {
-       width: 270px; 
+        width: 270px; 
     }
 }
 
@@ -47,24 +45,19 @@
 
 .team .card__title {
     margin-bottom: 10px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
     color: getColor(primaryTextColor);
+    @include fSize(500, 16px, 1.19, 0.03em);
 
 }
 
 .team .card__label {
     margin-bottom: 16px;
-    font-size: 16px;
-    line-height: 1.19;
     color: getColor(otherTextColor);
+    @include fSize(400, 16px, 1.19, 0.03em);
 }
 
 .team .card__links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexJustAlign(flex, center, center);
     gap: 10px;
     color: getColor(iconColor);
 }
@@ -73,9 +66,8 @@
     display: flex;
     padding: 12px;
     border-radius: 50%;
-    transition-property: background-color, color;
-    transition-duration: 250ms;
-    transition-timing-function: $timingBuzier;
+    transition: background-color 250ms $timingBuzier, 
+        color 250ms $timingBuzier;
 
     &:hover,
     &:focus {

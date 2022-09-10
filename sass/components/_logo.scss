@@ -3,9 +3,7 @@
 .logo {
     color: getColor(primaryTextColor);
     font-family: Raleway, sans-serif;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    @include fSize(700, 26px, 1.19, 0.03em);
     text-decoration: none;
 }
 

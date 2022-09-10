@@ -1,9 +1,5 @@
 @import '../utils/variables';
 
-.features {
-    
-}
-
 .features__list {
     display: flex;
     flex-wrap: wrap;
@@ -29,24 +25,19 @@
 }
 
 .features__img {
-    display: flex;
-    justify-content: center;
+    @include flexJust(flex, center);
     margin-bottom: 30px;
     padding: 25px 0;
     background-color: getColor(accentBlockColor);
     border-radius: 4px;
-
-
 }
 
 .features__title {
     margin-bottom: 10px;
-    text-align: center;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
     color: getColor(primaryTextColor);
+    @include fSize(700, 14px, 1.14, 0.03em);
+    text-align: center;
+    text-transform: uppercase;
 
     @media screen and (min-width: $tablet) {
         text-align: start;
@@ -54,7 +45,6 @@
 }
 
 .features__text {
-    font-size: 14px;
-    line-height: 1.7;
     color: getColor(otherTextColor);
+    @include fSize(400, 14px, 1.7, 0.03em);
 }

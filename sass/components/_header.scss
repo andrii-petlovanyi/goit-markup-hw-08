@@ -22,20 +22,16 @@
 
 .mobile-menu {
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include flexJustDir(flex, space-between, column);
 }
 
 .mobile-menu .wrap {
-    display: flex;
-    flex-direction: column;
+    @include flexDir(flex, column);
     gap: 64px;
 }
 
 .mobile-menu  .nav {
-    display: flex;
-    flex-direction: column;
+    @include flexDir(flex, column);
     gap: 32px;
 }
 
@@ -62,17 +58,13 @@
 }
 
 .mobile-menu .contact {
-    display: flex;
-    flex-direction: column;
+    @include flexDir(flex, column);
     gap: 32px;
 }
 
 .mobile-menu .contact__item{
     color: getColor(otherTextColor);
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.16;
-    letter-spacing: 0.02em;
+    @include fSize(500, 24px, 1.16, 0.02em);
 
     &:not(:last-child) {
         color: getColor(acentTextColor);
@@ -89,11 +81,8 @@
 
 .social__item {
     position: relative;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.22;
-    letter-spacing: 0.02em;
     color: getColor(acentTextColor);
+    @include fSize(500, 18px, 1.22, 0.02em);
 
     &:not(:last-child) .social__link::after {
         content: "";
@@ -130,19 +119,15 @@
 }
 
 .navigation__list {
-    display: flex;
-    flex-direction: row;
+    @include flexDir(flex, row);
     gap: 50px;
 }
 
 .navigation__link {
-    padding: 32px 0;
     position: relative;
+    padding: 32px 0;
     color: vgetColor(primaryTextColor);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    @include fSize(500, 14px, 1.14, 0.02em);
     text-decoration: none;
     transition: color 250ms $timingBuzier;
 
@@ -167,9 +152,7 @@
 }
 
 .contacts {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    @include flexAlignDir(flex, flex-start, column);
     gap: 10px;
 
     @media screen and (min-width: $desktop) {
@@ -182,10 +165,7 @@
 .contacts__link {
     display: block;
     color: getColor(otherTextColor);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    @include fSize(500, 14px, 1.14, 0.02em);
     text-decoration: none;
     cursor: pointer;
     transition: color 250ms $timingBuzier;

@@ -74,23 +74,18 @@
 }
 
 .modal .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flexAlignDir(flex, center, column);
     width: 100%;
 }
 
 .modal .form__title {
     margin-bottom: 12px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.5;
-    text-align: center;
-    letter-spacing: 0.03em;
     color: getColor(primaryTextColor);
+    @include fSize(700, 20px, 1.5, 0.03em);
+    text-align: center;
 
     @media screen and (min-width: $desktop) {
-            line-height: 1.15;
+        line-height: 1.15;
     }
 }
 
@@ -122,11 +117,8 @@
 
 .modal .form__info {
     display: block;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
     color: getCoor(otherTextColor);
+    @include fSize(400, 12px, 1.16, 0.01em);
 }
 
 .modal .form__icon {
@@ -153,9 +145,7 @@
     transition: border 250ms $timingBuzier;
 
     &::placeholder {
-        font-size: 12px;
-        line-height: 1.16;
-        letter-spacing: 0.01em;
+        @include fSize(400, 12px, 1.16, 0.01em);
         color: rgba(117, 117, 117, 0.5);
     }
 
@@ -174,15 +164,14 @@
 
 .form .check {
     position: relative;
+
 }
 
 .form .check__policy-info {
     display: inline;
-    font-weight: 400;
-    font-size: 12px;
     margin-right: 5px;
-    line-height: 1.71;
     color: getColor(otherTextColor);
+    @include fSize(400, 12px, 1.71, 0.03em);
 
     @media screen and (min-width: $desktop) {
         font-size: 14px;        
@@ -208,13 +197,11 @@
 
 .form .check__icon-checked {
     position: absolute;
-    display: flex;
-    align-items: center;
+    @include flexAlign(flex, center);
     margin-right: 4px;
     left: 0;
     top: 4px;
     opacity: 0;
-    transition: opacity 250ms $timingBuzier;
 
     &:hover,
     &:focus {

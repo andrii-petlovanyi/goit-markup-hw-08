@@ -32,9 +32,7 @@
 
 .container--head_resize {
     padding: 0 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flexJustAlign(flex, space-between, center);
     height: 60px;
 
     @media screen and (min-width: $tablet) {
@@ -42,8 +40,7 @@
     }
 
     @media screen and (min-width: $desktop) {
-        display: flex;
-        justify-content: flex-start;
+        @include flexJust(flex, flex-start);
         width: $desktop;
         margin: 0 auto;
 
@@ -68,10 +65,7 @@
 }
 
 .container--hero_resize {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexJustAlignDir(flex, center, center, column);
     padding: 118px 0;
 
     @media screen and (min-width: $desktop) {
@@ -111,14 +105,12 @@
 
 .container--footer_resize {
     padding: 60px 15px;
-    display: flex;
+    @include flexJustAlign(flex, center, baseline);
     flex-wrap: wrap;
-    justify-content: center;
     gap: 60px;
 
     @media screen and (min-width: $desktop) {
-        align-items: baseline;
-        justify-content: space-between;
+        @include flexJustAlign(flex, space-between, baseline);
         gap: 0;
     }
 

@@ -23,3 +23,51 @@ $timingBuzier: cubic-bezier(0.4, 0, 0.2, 1);
 $mobile: 480px;
 $tablet: 768px;
 $desktop: 1200px;
+
+// --- Mixins ---
+@mixin fSize($weight, $size, $height, $l-spacing) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    letter-spacing: $l-spacing;
+}
+
+@mixin flexJust($display, $justifyCont) {
+    display: $display;
+    justify-content: $justifyCont;
+}
+
+@mixin flexDir($display, $direction) {
+    display: $display;
+    flex-direction: $direction;
+}
+
+@mixin flexAlign($display, $align) {
+    display: $display;
+    align-items: $align;
+}
+
+@mixin flexJustAlign($display, $justifyCont, $align) {
+    display: $display;
+    justify-content: $justifyCont;
+    align-items: $align;
+}
+
+@mixin flexJustDir($display, $justifyCont, $direction) {
+    display: $display;
+    justify-content: $justifyCont;
+    flex-direction: $direction;
+}
+
+@mixin flexAlignDir($display, $align, $direction) {
+    display: $display;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin flexJustAlignDir($display, $justify, $align, $direction) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}

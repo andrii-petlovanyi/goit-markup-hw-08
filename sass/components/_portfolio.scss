@@ -21,6 +21,7 @@
 .filter__button {
     padding: 6px 22px;
     margin-bottom: 15px;
+    color: getColor(primaryTextColor);
     background: getColor(accentBlockColor);
     border-radius: 4px;
     border: none;

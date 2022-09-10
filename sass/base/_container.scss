@@ -1,3 +1,5 @@
+@import '../utils/variables';
+
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -29,6 +31,7 @@
 }
 
 .container--head_resize {
+    padding: 0 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,6 +39,31 @@
 
     @media screen and (min-width: $tablet) {
         height: 80px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        justify-content: flex-start;
+        width: $desktop;
+        margin: 0 auto;
+
+    }
+}
+
+.container--mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+    background-color: getColor(secondTextColor);
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+
+    &.is-open {
+        transform: translateX(0);
     }
 }
 

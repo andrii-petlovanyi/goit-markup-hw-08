@@ -10,33 +10,38 @@
 
   <body>
     <header class="header">
-      <div class="container container--head_resize">
+      <!-- --- Desktop/Tablet menu --- -->
+      <div class="container--head_resize">
         <a class="logo" href="./index.html">
           <span class="logo__peace">Web</span>Studio</a
         >
-        <button class="menu__burger">
-          <svg width="40" height="40">
+        <button
+          class="burger js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="burger__icon" width="40" height="40">
             <use href="./images/symbol-defs.svg#icon-burger"></use>
           </svg>
         </button>
-        <!-- <nav class="navigation visually-hidden">
+        <nav class="navigation">
           <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="./index.html">Студія</a>
+            </li>
             <li class="navigation__item">
               <a
                 class="navigation__link navigation__link--active"
-                href="./index.html"
-                >Студія</a
+                href="./portfolio.html"
+                >Портфоліо</a
               >
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="./portfolio.html">Портфоліо</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link" href="#">Контакти</a>
             </li>
           </ul>
         </nav>
-        <ul class="contacts visually-hidden">
+        <ul class="contacts">
           <li class="contacts__item">
             <a
               class="contacts__link"
@@ -61,7 +66,66 @@
               +380961111111
             </a>
           </li>
-        </ul> -->
+        </ul>
+      </div>
+
+      <!-- --- MobileMenuBurger --- -->
+      <div class="container--mobile js-menu-container" id="mobile-menu">
+        <button class="burger js-close-menu">
+          <svg class="burger__iconx" width="40" height="40">
+            <use href="./images/symbol-defs.svg#icon-burger_x"></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu">
+          <ul class="nav">
+            <li class="nav__item">
+              <a class="nav__link" href="./index.html">Студія</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link nav__link--active" href="./portfolio.html"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Контакти</a>
+            </li>
+          </ul>
+          <div class="wrap">
+            <ul class="contact">
+              <li class="contact__item">
+                <a
+                  class="contact__link"
+                  href="tel:+380961111111"
+                  aria-label="our phone number"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="contact__item">
+                <a
+                  class="contact__link"
+                  href="mailto:info@devstudio.com"
+                  aria-label="Our email"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="social">
+              <li class="social__item">
+                <a class="social__link" href="#">Instagram</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">Twitter</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">Facebook</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link" href="#">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -573,5 +637,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- --- Script MobileMenu --- -->
+    <script src="./js/body-scroll-lock.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

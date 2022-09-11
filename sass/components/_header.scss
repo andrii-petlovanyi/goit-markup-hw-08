@@ -39,10 +39,7 @@
 .mobile-menu .nav__link {
     display: block;
     color: getColor(primaryTextColor);
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 47px;
-    letter-spacing: 0.02em;
+    @include fSize(500, 40px, 1.17, 0.02em);
     transition: transform 250ms $timingBuzier,
     color 250ms $timingBuzier;
 
@@ -107,6 +104,12 @@
     border: none;
     background: none;
     margin-left: auto;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        fill: getColor(acentTextColor);
+    }
 
     @media (min-width: $tablet) {
         display: none;

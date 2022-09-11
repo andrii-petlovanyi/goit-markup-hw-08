@@ -15,13 +15,8 @@
 }
 
 .features__card {
-    display: flex;
-    flex-direction: column;
-
-
-    @media screen and (min-width: $mobile) {
-        max-width: 450px;
-    }
+    @include flexDir(flex, column);
+    max-width: 450px;
 
     @media screen and(min-width: $tablet) {
         width: 354px;

@@ -250,17 +250,20 @@ body {
 }
 
 .container--header_desktop {
-  padding: 0 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
 }
+@media screen and (min-width: 480px) {
+  .container--header_desktop {
+    width: 100%;
+  }
+}
 @media screen and (min-width: 768px) {
   .container--header_desktop {
     width: 768px;
     height: 80px;
-    margin: 0 auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -268,7 +271,6 @@ body {
     display: flex;
     justify-content: flex-start;
     width: 1200px;
-    margin: 0 auto;
   }
 }
 

@@ -31,20 +31,21 @@
 }
 
 .container--header_desktop {
-    padding: 0 15px;
     @include flexJustAlign(flex, space-between, center);
     height: 60px;
+
+    @media screen and (min-width: $mobile) {
+        width: 100%;
+    }
 
     @media screen and (min-width: $tablet) {
         width: $tablet;
         height: 80px;
-        margin: 0 auto;
     }
 
     @media screen and (min-width: $desktop) {
         @include flexJust(flex, flex-start);
         width: $desktop;
-        margin: 0 auto;
     }
 }
 

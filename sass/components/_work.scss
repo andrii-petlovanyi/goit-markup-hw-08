@@ -2,6 +2,7 @@
 
 .work {
     display: none;
+    padding-bottom: 94px;
 
     @media screen and (min-width: $desktop) {
         display: contents;

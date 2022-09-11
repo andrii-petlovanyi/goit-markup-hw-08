@@ -1,7 +1,12 @@
 @import '../utils/variables';
 
 .portfolio {
+    padding: 60px 0;    
     background-color: getColor(secondTextColor);
+
+    @media screen and (min-width: $desktop) {
+        padding: 94px 0;
+    }
 }
 
 .filter {

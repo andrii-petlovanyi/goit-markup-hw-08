@@ -249,7 +249,7 @@ body {
   }
 }
 
-.container--head_resize {
+.container--header_desktop {
   padding: 0 15px;
   display: flex;
   justify-content: space-between;
@@ -257,14 +257,14 @@ body {
   height: 60px;
 }
 @media screen and (min-width: 768px) {
-  .container--head_resize {
+  .container--header_desktop {
     width: 768px;
     height: 80px;
     margin: 0 auto;
   }
 }
 @media screen and (min-width: 1200px) {
-  .container--head_resize {
+  .container--header_desktop {
     display: flex;
     justify-content: flex-start;
     width: 1200px;
@@ -272,7 +272,7 @@ body {
   }
 }
 
-.container--mobile {
+.container--header_mobile {
   position: fixed;
   top: 0;
   left: 0;
@@ -284,7 +284,7 @@ body {
   transform: translateX(100%);
   transition: transform 250ms ease-in-out;
 }
-.container--mobile.is-open {
+.container--header_mobile.is-open {
   transform: translateX(0);
 }
 
@@ -293,48 +293,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 118px 0;
-}
-@media screen and (min-width: 1200px) {
-  .container--hero_resize {
-    padding: 200px 0;
-  }
-}
-
-.container-features_resize {
-  padding: 60px 15px;
-}
-@media screen and (min-width: 1200px) {
-  .container-features_resize {
-    padding: 94px 15px;
-  }
-}
-
-.container--work_resize {
-  padding: 94px 15px;
-  padding-top: 0;
-}
-
-.container--team_resize {
-  padding: 60px 15px;
-}
-@media screen and (min-width: 1200px) {
-  .container--team_resize {
-    padding: 94px 15px;
-  }
-}
-
-.container--customer_resize {
-  padding: 60px 15px;
-}
-@media screen and (min-width: 1200px) {
-  .container--customer_resize {
-    padding: 94px 15px;
-  }
 }
 
 .container--footer_resize {
-  padding: 60px 15px;
   display: flex;
   justify-content: center;
   align-items: baseline;
@@ -350,21 +311,12 @@ body {
   }
 }
 
-.container--portfolio_resize {
-  padding: 60px 15px;
-}
-@media screen and (min-width: 1200px) {
-  .container--portfolio_resize {
-    padding: 94px 15px;
-  }
-}
-
 /* Site navigation / Header*/
 .header {
   border-bottom: 1px solid #ececec;
 }
 
-.container--mobile .burger {
+.container--header_mobile .burger {
   position: absolute;
   top: 10px;
   right: 15px;
@@ -591,14 +543,19 @@ body {
 }
 
 .hero {
+  padding: 118px 0;
   max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   color: #fff;
   background-color: #2f303a;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/hero@1x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding: 200px 0;
+  }
 }
 
 @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -625,6 +582,15 @@ body {
     width: 696px;
     line-height: 1.36;
     font-size: 44px;
+  }
+}
+
+.features {
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .features {
+    padding: 94px 0;
   }
 }
 
@@ -689,6 +655,7 @@ body {
 
 .work {
   display: none;
+  padding-bottom: 94px;
 }
 @media screen and (min-width: 1200px) {
   .work {
@@ -734,7 +701,13 @@ body {
 }
 
 .team {
+  padding: 60px 0;
   background-color: #f5f4fa;
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    padding: 94px 0;
+  }
 }
 
 .team__title {
@@ -821,6 +794,15 @@ body {
   fill: currentColor;
 }
 
+.customer {
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .customer {
+    padding: 94px 0;
+  }
+}
+
 .customer__list {
   display: flex;
   justify-content: center;
@@ -877,6 +859,7 @@ body {
 }
 
 .footer {
+  padding: 60px 0;
   background-color: #2f303a;
 }
 
@@ -1243,7 +1226,13 @@ body {
 }
 
 .portfolio {
+  padding: 60px 0;
   background-color: #fff;
+}
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding: 94px 0;
+  }
 }
 
 .filter {

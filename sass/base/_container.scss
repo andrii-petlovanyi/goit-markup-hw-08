@@ -30,7 +30,7 @@
     }
 }
 
-.container--head_resize {
+.container--header_desktop {
     padding: 0 15px;
     @include flexJustAlign(flex, space-between, center);
     height: 60px;
@@ -45,11 +45,10 @@
         @include flexJust(flex, flex-start);
         width: $desktop;
         margin: 0 auto;
-
     }
 }
 
-.container--mobile {
+.container--header_mobile {
     position: fixed;
     top: 0;
     left: 0;
@@ -68,46 +67,10 @@
 
 .container--hero_resize {
     @include flexJustAlignDir(flex, center, center, column);
-    padding: 118px 0;
-
-    @media screen and (min-width: $desktop) {
-        padding: 200px 0;
-    }
-}
-
-.container-features_resize {
-    padding: 60px 15px;
-
-    @media screen and (min-width: $desktop) {
-        padding: 94px 15px;
-    }
-}
-
-.container--work_resize {
-    padding: 94px 15px;
-    padding-top: 0;
-}
-
-.container--team_resize {
-    padding: 60px 15px;
-
-    @media screen and (min-width: $desktop) {
-        padding: 94px 15px;
-    }
-
-}
-
-.container--customer_resize {
-    padding: 60px 15px;
-
-    @media screen and (min-width: $desktop) {
-            padding: 94px 15px;
-        }
 }
 
 
 .container--footer_resize {
-    padding: 60px 15px;
     @include flexJustAlign(flex, center, baseline);
     flex-wrap: wrap;
     gap: 60px;
@@ -117,12 +80,4 @@
         gap: 0;
     }
 
-}
-
-.container--portfolio_resize {
-    padding: 60px 15px;
-
-    @media screen and (min-width: $desktop) {
-        padding: 94px 15px;
-    }
 }

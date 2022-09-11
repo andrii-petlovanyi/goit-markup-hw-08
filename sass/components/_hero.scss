@@ -1,9 +1,9 @@
 @import '../utils/variables';
 
 .hero {
+    padding: 118px 0;
     max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     color: getColor(secondTextColor);
     background-color: getColor(secondBlockColor);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
@@ -11,6 +11,10 @@
         url(../images/desktop/hero@1x.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media screen and (min-width: $desktop) {
+        padding: 200px 0;
+    }
 }
 
 @media screen and (min-device-pixel-ratio: 2),

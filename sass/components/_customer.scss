@@ -1,5 +1,13 @@
 @import '../utils/variables';
 
+.customer {
+    padding: 60px 0;
+
+    @media screen and (min-width: $desktop) {
+        padding: 94px 0;
+    }
+}
+
 .customer__list {
     @include flexJust(flex, center);
     flex-wrap: wrap;

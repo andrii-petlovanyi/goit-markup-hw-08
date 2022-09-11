@@ -1,7 +1,12 @@
 @import '../utils/variables';
 
 .team {
+    padding: 60px 0;
     background-color: getColor(accentBlockColor);
+
+    @media screen and (min-width: $desktop) {
+        padding: 94px 0;
+    }
 }
 
 .team__title {

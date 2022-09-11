@@ -86,6 +86,10 @@
     @media screen and (min-width: $tablet) {
         width: 354px;
     }
+
+    @media screen and (min-width: $desktop) {
+        width: 370px;
+    }
 }
 
 .portfolio .list__thumb {

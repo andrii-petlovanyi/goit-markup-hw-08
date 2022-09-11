@@ -17,6 +17,7 @@
     &:hover,
     &:focus {
         fill: getColor(acentTextColor);
+        cursor: pointer;
     }
 }
 
@@ -165,7 +166,7 @@
 .contacts__link {
     display: block;
     color: getColor(otherTextColor);
-    @include fSize(500, 14px, 1.14, 0.02em);
+    @include fSize(500, 12px, 1.14, 0.02em);
     text-decoration: none;
     cursor: pointer;
     transition: color 250ms $timingBuzier;
@@ -174,6 +175,10 @@
     &:focus {
         color: getColor(acentTextColor);
     }
+
+    @media screen and (min-width: $desktop) {
+        @include fSize(500, 16px, 1.14, 0.02em);
+    }
 }
 
 .contacts__email-icon,
@@ -181,7 +186,7 @@
     fill: currentColor;
     margin-right: 8px;
 
-    @media screen and (min-width) {
+    @media screen and (min-width: $desktop) {
         margin-right: 10px;
     }
 }

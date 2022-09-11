@@ -36,7 +36,9 @@
     height: 60px;
 
     @media screen and (min-width: $tablet) {
+        width: $tablet;
         height: 80px;
+        margin: 0 auto;
     }
 
     @media screen and (min-width: $desktop) {
@@ -83,6 +85,7 @@
 
 .container--work_resize {
     padding: 94px 15px;
+    padding-top: 0;
 }
 
 .container--team_resize {

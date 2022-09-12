@@ -865,6 +865,12 @@ body {
   background-color: #2f303a;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__contacts {
+    margin-right: 105px;
+  }
+}
+
 .footer .logo {
   display: block;
   margin-bottom: 20px;

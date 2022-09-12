@@ -5,6 +5,13 @@
     background-color: getColor(secondBlockColor);
 }
 
+.footer__contacts {
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        margin-right: 105px;
+    }
+}
+
 .footer .logo {
     display: block;
     margin-bottom: 20px;

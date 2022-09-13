@@ -550,13 +550,23 @@ body {
 
 .hero {
   padding: 118px 0;
-  max-width: 1600px;
+  max-width: 100%;
   margin: 0 auto;
   color: #fff;
   background-color: #2f303a;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/hero@1x.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/hero@1x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media screen and (min-width: 480.98px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/hero@1x.jpg);
+  }
+}
+@media screen and (min-width: 769.98px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/hero@1x.jpg);
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero {
@@ -564,9 +574,19 @@ body {
   }
 }
 
-@media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media screen and (max-width: 480px) and (min-device-pixel-ratio: 2), screen and (max-width: 480px) and (--weblit-min-device-pixel-ratio: 2), screen and (max-width: 480px) and (-o-min-device-pixel-ratio: 2/1), screen and (max-width: 480px) and (min-resolution: 192dpi), screen and (max-width: 480px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/desktop/hero@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/hero@2x.jpg);
+  }
+}
+@media screen and (min-width: 480.98px) and (min-device-pixel-ratio: 2), screen and (min-width: 480.98px) and (--weblit-min-device-pixel-ratio: 2), screen and (min-width: 480.98px) and (-o-min-device-pixel-ratio: 2/1), screen and (min-width: 480.98px) and (min-resolution: 192dpi), screen and (min-width: 480.98px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/hero@2x.jpg);
+  }
+}
+@media screen and (min-width: 769.98px) and (min-device-pixel-ratio: 2), screen and (min-width: 769.98px) and (--weblit-min-device-pixel-ratio: 2), screen and (min-width: 769.98px) and (-o-min-device-pixel-ratio: 2/1), screen and (min-width: 769.98px) and (min-resolution: 192dpi), screen and (min-width: 769.98px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/hero@2x.jpg);
   }
 }
 .hero__title {

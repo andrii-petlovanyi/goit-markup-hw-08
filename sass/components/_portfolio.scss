@@ -1,7 +1,7 @@
 @import '../utils/variables';
 
 .portfolio {
-    padding: 60px 0;    
+    padding: 60px 0;
     background-color: getColor(secondTextColor);
 
     @media screen and (min-width: $desktop) {
@@ -27,7 +27,7 @@
     padding: 6px 22px;
     margin-bottom: 15px;
     color: getColor(primaryTextColor);
-    background: getColor(accentBlockColor);
+    background-color: getColor(accentBlockColor);
     border-radius: 4px;
     border: none;
     @include fSize(500, 16px, 1.62, 0.03em);

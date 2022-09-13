@@ -14,6 +14,7 @@
 
 .burger__iconx {
     transition: fill 250ms $timingBuzier;
+
     &:hover,
     &:focus {
         fill: getColor(acentTextColor);
@@ -31,7 +32,7 @@
     gap: 64px;
 }
 
-.mobile-menu  .nav {
+.mobile-menu .nav {
     @include flexDir(flex, column);
     gap: 32px;
 }
@@ -41,7 +42,7 @@
     color: getColor(primaryTextColor);
     @include fSize(500, 40px, 1.17, 0.02em);
     transition: transform 250ms $timingBuzier,
-    color 250ms $timingBuzier;
+        color 250ms $timingBuzier;
 
     &:hover,
     &:focus {
@@ -60,7 +61,7 @@
     gap: 32px;
 }
 
-.mobile-menu .contact__item{
+.mobile-menu .contact__item {
     color: getColor(otherTextColor);
     @include fSize(500, 24px, 1.16, 0.02em);
 
@@ -96,6 +97,7 @@
     }
 
 }
+
 // --- Tablet/Destop Menu ---
 .burger {
     width: 40px;
@@ -143,6 +145,7 @@
 
 .navigation__link--active {
     color: getColor(acentTextColor);
+
     &::after {
         content: "";
         position: absolute;
@@ -183,6 +186,7 @@
         @include fSize(500, 16px, 1.14, 0.02em);
     }
 }
+
 
 .contacts__email-icon,
 .contacts__smartphone-icon {

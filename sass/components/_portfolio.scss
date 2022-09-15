@@ -55,12 +55,7 @@
 .portfolio .list {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
-
-    @media screen and (min-width: $tablet) {
-        display: flex;
-        gap: 30px;
-    }
+    gap: 30px;
 
     @media screen and (min-width: $desktop) {
         display: grid;

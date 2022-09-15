@@ -1307,13 +1307,7 @@ body {
 .portfolio .list {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
-}
-@media screen and (min-width: 768px) {
-  .portfolio .list {
-    display: flex;
-    gap: 30px;
-  }
+  gap: 30px;
 }
 @media screen and (min-width: 1200px) {
   .portfolio .list {

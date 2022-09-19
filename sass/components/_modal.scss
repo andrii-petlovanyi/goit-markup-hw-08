@@ -11,6 +11,7 @@
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     visibility: visible;
+    overflow-y: scroll;
     transition: opacity 250ms $timingBuzier,
         visibility 250ms $timingBuzier;
 }
@@ -39,6 +40,16 @@
     border-radius: 4px;
     opacity: 1;
     transition: transform 250ms $timingBuzier;
+
+    @media screen and (max-height: 600px) {
+        top: 0;
+        transform: translate(-50%);
+    }
+
+    @media screen and (orientation: landscape) and (max-height: 600px) {
+        top: 0;
+        transform: translate(-50%);
+    }
 
     @media screen and (min-width: $mobile) {
         width: 450px;
